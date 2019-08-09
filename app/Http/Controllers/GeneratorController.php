@@ -36,6 +36,9 @@ class GeneratorController extends Controller
        if ($option === 'senha') {
             $result = (new Senha())->get($quant);
         }
+       if ($option === 'nif') {
+            $result = (new Nif())->get($quant);
+        }
 
 
 
