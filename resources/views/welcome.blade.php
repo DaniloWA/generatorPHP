@@ -37,6 +37,14 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                @if (isset($result))
+                    <h1>{!! $result !!}</h1>
+                @endif
+            </div>
         </div>
     </div>
 
