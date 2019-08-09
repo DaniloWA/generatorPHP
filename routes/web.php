@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GeneratorController@show')->name('frontend.index');
+Route::post('/create', 'GeneratorController@store')->name('frontend.post');

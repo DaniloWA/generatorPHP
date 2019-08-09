@@ -19,10 +19,11 @@
                 <hr>
 
 
-                <form>
+                <form method="POST" action="{{ route('frontend.post') }}" >
+                     @csrf
                     <div class="form-group">
                         <label for="opt">Escolha uma opção</label>
-                        <select class="form-control" id="opt">
+                        <select name="opts" class="form-control" id="opt">
                             <option value="senha">Senha</option>
                             <option value="nif">Nif</option>
                             <option value="mult">Multiplicação</option>
@@ -32,7 +33,7 @@
                     </div>
                     <div class="form-group">
                         <label for="quant">Quantidade</label>
-                        <input type="number" class="form-control" id="quant">
+                        <input name="quant" type="number" class="form-control" id="quant">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
