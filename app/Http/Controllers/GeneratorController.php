@@ -25,9 +25,18 @@ class GeneratorController extends Controller
        $option = $request->opts;
        $result = "";
 
+        if ($quant > 20) {
+            return redirect()->route('frontend.index', ['result' => 'A quantidade não pode passar de 100']);
+        }
+
        if ($option === 'soma') {
             $result = (new Soma())->get($quant);
         }
+
+       if ($option === 'senha') {
+            $result = (new Senha())->get($quant);
+        }
+
 
 
 
