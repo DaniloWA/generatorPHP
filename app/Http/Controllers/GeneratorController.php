@@ -45,6 +45,10 @@ class GeneratorController extends Controller
             $result = (new Tabuada())->get($quant);
         }
 
+       if ($option === 'seq') {
+            $result = (new Sequencia())->get($quant);
+        }
+
 
 
 
