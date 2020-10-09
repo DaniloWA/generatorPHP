@@ -49,6 +49,10 @@ class GeneratorController extends Controller
             $result = (new Sequencia())->get($quant);
         }
 
+        if ($option === 'fibonacci') {
+            $result = (new Fibonacci())->get($quant);
+        }
+
 
 
 
